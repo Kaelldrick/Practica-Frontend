@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="horario_clase.css">
+    <link rel="stylesheet" href="info.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="barra">
+            <span class="barra__boton">&#9776;</span>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar__logo">
+                <img class="sidebar__img" src="img/logo.png" alt="">
+                <h4>
+                    <span class="sidebar__span">UNI EARPFIM</span>
+                    <span class="sidebar__span sidebar__span--low">ADMINISTRADOR</span>
+                </h4>
+            </div>
+            <ul class="sidebar__list">
+                <li>
+                    <a href="#" class="sidebar__item sidebar__li">
+                        <div class="sidebar__icon">
+                            <span class="material-icons">work</span>General
+                        </div>
+                        <span class="material-icons expand-more">
+                            expand_more
+                        </span>
+                    </a>
+                </li>
+                <ul class="sidebar__sublist">
+                    <li class="sidebar__li">
+                        <a class="sidebar__link" href=".horario"><span class="material-icons">edit</span>Mi Horario
+                            de
+                            Clases</a>
+                    </li>
+                    <li class="sidebar__li">
+                        <a class="sidebar__link" href=".informacion"><span
+                                  class="material-icons">account_box</span>Informacion</a>
+                    </li>
+                    <li class="sidebar__li">
+                        <a class="sidebar__link" href=".asistencia"><span class="material-icons">
+                                edit_calendar
+                            </span>Asistencia</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="contenido">
+                <div class="bienvenida">
+                    <span>BIENVENIDO AL EARPFIM</span>
+                    <span><b>ZONA USUARIO</b></span>
+                    <img src="img/tuerca.gif" alt="" width="250px">
+                </div>
+            </div>
+            <div class="contenido horario">
+                <div id="titulo">
+                    <h2>Horario de clase</h2>
+                </div>
+                <table id="horario_docente">
+                    <thead>
+                        <tr>
+                            <th>HORA</th>
+                            <th>LUNES</th>
+                            <th>MARTES</th>
+                            <th>MIERCOLES</th>
+                            <th>JUEVES</th>
+                            <th>VIERNES</th>
+                            <th>SABADO</th>
+                            <th>DOMINGO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="contenido asistencia">
+                <div class="asistencia">
+                    <div class="viñeta">
+                        <p>Semestre:</p>
+                        <select name="" id="semestre">
+                        </select>
+                    </div>
+                    <p>Presione este boton solo cuando tenga que registrar su entrada y su salida de clase</p>
+                    <p>Hora: <span>12:24:46</span><button class="boton boton-verde" style="margin-left: 10px;">Marcar mi
+                            asistencia: Entrada/Salida</button></p>
+                    <button class="boton boton-naranja">Tomar asistencia alumnos</button>
+                    <button class="boton boton-azul">Solicitar recuperación/Justificación</button>
+                    <div>
+                        <button class="boton boton-azul">P:Puntal</button>
+                        <button class="boton boton-azul">T:Tardanza(min)</button>
+                        <button class="boton boton-azul">F:Falta</button>
+                        <button class="boton boton-azul">N.N:N.N</button>
+                    </div>
+                    <button class="boton boton-azul">Reporte</button>
+                </div>
+                <div class="contenedorDeMeses">
+
+                </div>
+            </div>
+            <div class="contenido informacion">
+                <div class="informacion__user">
+                    <div class="informacion__name">
+                        <img class="informacion__img" src="img/user.png" alt="" width="100px" height="100px">
+                        <div class="informacion__link">
+                            <p>USUARIO</p>
+                            <p>08161078</p>
+                            <div class="informacion__icons">
+                                <a href="#" class="informacion__icons__a">Actualizar<span
+                                          class="material-icons icon-same">cloud_upload</span></a>
+                                <a href="#" class="informacion__icons__a">Historial<span
+                                          class="material-icons icon-same">library_books</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="informacion__actions">
+                        <a href="#"><span class="material-icons informacion__icons__refresh">refresh</span></a>
+                        <a href="#" class="informacion__icons__pdf"><span>Generar PDF</span></a>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <a class="pagination__link active" href="#" data-id="info1">1er</a>
+                    <a class="pagination__link" href="#" data-id="info2">2do</a>
+                    <a class="pagination__link" href="#" data-id="info3">3ro</a>
+                    <a class="pagination__link" href="#" data-id="info4">4to</a>
+                </div>
+                <!-- Formulario -->
+                <div class="container">
+                    <!-- Primera pagina -->
+                    <div id="info1" class="page active">
+                        <div class="form">
+                            <h2 class="sub_titulo">1.- DATOS PERSONALES</h2>
+                            <div class="fila">
+                                <div class="grupo">
+                                    <label for="sexo">Sexo</label>
+                                    <select name="" id="sexo">
+                                        <option value="">Seleccionar</option>
+                                        <option value="">Masculino</option>
+                                        <option value="">Femenino</option>
+                                    </select>
+                                </div>
+                                <div class="grupo">
+                                    <label for="nacimiento">Fecha de Nacimiento</label>
+                                    <input type="date" id="nacimiento">
+                                </div>
+                            </div>
+                            <div class="grupo">
+                                <label for="telefono">Telefono Fijo</label>
+                                <input type="text" id="telefono">
+                            </div>
+                            <div class="grupo">
+                                <label for="ruc">RUC</label>
+                                <input type="text" id="ruc">
+                            </div>
+                            <div class="grupo">
+                                <label for="brevete">Brevete y Categoria</label>
+                                <input type="text" id="brevete">
+                            </div>
+                            <div class="fila">
+                                <div class="grupo">
+                                    <label for="civil">Estado Civil</label>
+                                    <select name="" id="civil">
+                                        <option value="">Seleccionar</option>
+                                        <option value="">Soltero</option>
+                                        <option value="">Casado</option>
+                                        <option value="">Divorciado</option>
+                                    </select>
+                                </div>
+                                <div class="grupo">
+                                    <label for="matrimonio">Fecha Matrimonio</label>
+                                    <input type="date" id="matrimonio">
+                                </div>
+                            </div>
+                            <div class="grupo">
+                                <label for="email">Email</label>
+                                <input type="text" id="email">
+                            </div>
+                            <div class="grupo">
+                                <label for="dni">DNI</label>
+                                <input type="text" id="dni">
+                            </div>
+                            <div class="grupo">
+                                <label for="celular">Celular</label>
+                                <input type="text" id="celular">
+                            </div>
+                            <div class="grupo">
+                                <label for="lib">Lib Militar</label>
+                                <input type="text" id="lib">
+                            </div>
+                            <div class="grupo">
+                                <label for="gp">Grupo sanguineo</label>
+                                <input type="text" id="gp">
+                            </div>
+                            <h2 class="sub_titulo">Lugar de Nacimiento</h2>
+                            <div class="grupo">
+                                <label for="pais">País</label>
+                                <select name="" id="pais">
+                                    <option value="">Seleccionar</option>
+                                    <option value="">Perú</option>
+                                    <option value="">Otro</option>
+                                </select>
+                            </div>
+                            <div class="grupo">
+                                <label for="departamento">Departamento</label>
+                                <select name="" id="departamento">
+                                    <option value="">Seleccionar</option>
+                                </select>
+                            </div>
+                            <div class="grupo">
+                                <label for="provincia">Provincia</label>
+                                <select name="" id="provincia">
+                                    <option value="">Seleccionar</option>
+                                </select>
+                            </div>
+                            <div class="grupo">
+                                <label for="distrito">Distrito</label>
+                                <select name="" id="distrito">
+                                    <option value="">Seleccionar</option>
+                                </select>
+                            </div>
+                            <h2 class="sub_titulo">Domicilio</h2>
+                            <div class="ampliacion">
+                                <button data-modal="modal-1" class="boton boton-azul btn-modal">Añadir
+                                    Registro</button>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Orden</th>
+                                            <th>País</th>
+                                            <th>Direccion Extranjera</th>
+                                            <th>Departamento</th>
+                                            <th>Provincia</th>
+                                            <th>Distrito</th>
+                                            <th>Tipo de Vía</th>
+                                            <th>Nombre de la Vía</th>
+                                            <th>Tipo</th>
+                                            <th>Número de inmueble</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-1 modal">
+                                <div class="form form-modal">
+                                    <h4 class="sub_titulo">Agregar domicilio</h4>
+                                    <div class="grupo selector">
+                                        <label for="p">País</label>
+                                        <select name="" id="p">
+                                            <option value="" selected>Seleccionar</option>
+                                            <option value="Peru">Perú</option>
+                                            <option value="Extranjero">Extranjero</option>
+                                        </select>
+                                    </div>
+                                    <div class="grupo selector oculto">
+                                        <label for="depa">Departamento</label>
+                                        <select name="" id="depa">
+                                        </select>
+                                    </div>
+                                    <div class="grupo selector oculto">
+                                        <label for="provincia">Provincia</label>
+                                        <select name="" id="prov">
+                                        </select>
+                                    </div>
+                                    <div class="grupo selector oculto">
+                                        <label for="distrito">Distrito</label>
+                                        <select name="" id="dis">
+                                        </select>
+                                    </div>
+                                    <div class="grupo oculto">
+                                        <label for="via">Tipo de Vía</label>
+                                        <select name="" id="via">
+                                            <option value="" selected>Seleccionar</option>
+                                        </select>
+                                    </div>
+                                    <div class="grupo oculto">
+                                        <label for="nombre_via">Nombre de la Vía</label>
+                                        <input type="text" id="nombre_via">
+                                    </div>
+                                    <div class="grupo oculto">
+                                        <label for="tipo">Tipo</label>
+                                        <select name="" id="tipo">
+                                            <option value="" selected>Seleccionar</option>
+                                        </select>
+                                    </div>
+                                    <div class="grupo oculto">
+                                        <label for="nro_inmueble">Número de inmueble</label>
+                                        <input type="text" id="nro_inmueble">
+                                    </div>
+                                    <div class="grupo oculto">
+                                        <label for="zona">Tipo de Zona</label>
+                                        <select name="" id="zona">
+                                            <option value="" selected>Seleccionar</option>
+                                        </select>
+                                    </div>
+                                    <div class="grupo oculto">
+                                        <label for="nombre_zona">Nombre de la Zona</label>
+                                        <input type="text" id="nombre_zona">
+                                    </div>
+                                    <div class="grupo oculto">
+                                        <textarea name="" id="" style="resize: none;" rows="4" cols="4"></textarea>
+                                    </div>
+                                    <div>
+                                        <button class="boton guardar btn-cerrar">Guardar</button>
+                                        <button class="boton cancelar btn-cerrar">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="sub_titulo">1.1.-Personas a comunicar en caso de emergencia:</h2>
+                            <p class="sub_titulo">Contacto 1 (*)</p>
+                            <div class="fila_2">
+                                <div class="grupo">
+                                    <label for="contacto1">Apellidos y Nombres</label>
+                                    <input type="text" id="contacto1">
+                                </div>
+                                <div class="grupo">
+                                    <label for="parentesco1">Parentesco</label>
+                                    <input type="text" id="parentesco1">
+                                </div>
+                                <div class="grupo">
+                                    <label for="cel1">Celular</label>
+                                    <input type="text" id="cel1">
+                                </div>
+                            </div>
+                            <p class="sub_titulo">Contacto 2 (*)</p>
+                            <div class="fila_2">
+                                <div class="grupo">
+                                    <label for="contacto2">Apellidos y Nombres</label>
+                                    <input type="text" id="contacto2">
+                                </div>
+                                <div class="grupo">
+                                    <label for="parentesco2">Parentesco</label>
+                                    <input type="text" id="parentesco2">
+                                </div>
+                                <div class="grupo">
+                                    <label for="cel2">Celular</label>
+                                    <input type="text" id="cel2">
+                                </div>
+                            </div>
+                            <p class="sub_titulo">Contacto 3</p>
+                            <div class="fila_2">
+                                <div class="grupo">
+                                    <label for="contacto3">Apellidos y Nombres</label>
+                                    <input type="text" id="contacto3">
+                                </div>
+                                <div class="grupo">
+                                    <label for="parentesco3">Parentesco</label>
+                                    <input type="text" id="parentesco3">
+                                </div>
+                                <div class="grupo">
+                                    <label for="cel3">Celular</label>
+                                    <input type="text" id="cel3">
+                                </div>
+                            </div>
+                            <h2 class="sub_titulo">2.-Datos Laborales</h2>
+                            <div class="fila_2">
+                                <div class="grupo">
+                                    <label for="condicion">Condición (C/N)</label>
+                                    <select name="" id="condicion">
+                                        <option value="">Seleccionar</option>
+                                    </select>
+                                </div>
+                                <div class="grupo">
+                                    <label for="ategoria">Categoria</label>
+                                    <select name="" id="ategoria">
+                                        <option value="">Seleccionar</option>
+                                    </select>
+                                </div>
+                                <div class="grupo">
+                                    <label for="dedicacion">Dedicación</label>
+                                    <select name="" id="dedicacion">
+                                        <option value="">Seleccionar</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="fila_2">
+                                <div class="grupo">
+                                    <label for="horas">Horas</label>
+                                    <input type="text" id="horas">
+                                </div>
+
+                                <div class="grupo">
+                                    <label for="hl">Horas lectivas</label>
+                                    <input type="text" id="hl">
+                                </div>
+                                <div class="grupo">
+                                    <label for="dl">Dependencia donde labora (Actual)</label>
+                                    <input type="text" id="dl">
+                                </div>
+                            </div>
+                            <div class="fila_2">
+                                <div class="grupo">
+                                    <label for="">Fecha Ingreso FIM</label>
+                                    <input type="date">
+                                </div>
+                                <div class="grupo">
+                                    <label for="">Fecha. Nombramiento</label>
+                                    <input type="date">
+                                </div>
+                                <div class="grupo">
+                                    <label for="">Régimen Pensionario</label>
+                                    <select name="" id="">
+                                        <option value="">Seleccionar</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="fila_2">
+                                <div class="grupo">
+                                    <label for="afp">AFP (nombre)</label>
+                                    <input type="text" id="afp">
+                                </div>
+                                <div class="grupo">
+                                    <label for="cod_afp">Cód. AFP</label>
+                                    <input type="text" id="cod_afp">
+                                </div>
+                                <div class="grupo">
+                                    <label for="cod_essalud">Cód. EsSalud</label>
+                                    <input type="text" id="cod_essalud">
+                                </div>
+                                <div class="grupo">
+                                    <label for="otro">Otro Tipo de Seguro</label>
+                                    <input type="text" id="otro">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Segunda pagina -->
+                    <div id="info2" class="page">
+                        <div class="form">
+                            <p class="sub_titulo">3.-DATOS DE FORMACIÓN PROFESIONAL: Indicar Grados y Titulos
+                                obtenidos, señalando Fecha de Revalidación, para el caso de Títulos y Grados
+                                otorgados en el Extranjero</p>
+                            <div class="ampliacion">
+                                <button data-modal="modal-2" class="boton boton-azul btn-modal">Añadir
+                                    Registro</button>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Orden</th>
+                                            <th>Formacion Profesional</th>
+                                            <th>País</th>
+                                            <th>Universidad</th>
+                                            <th>Especialidad</th>
+                                            <th>Fecha inicio</th>
+                                            <th>Fecha final</th>
+                                            <th>Grado Obtenido</th>
+                                            <th>Documento sustentatorio</th>
+                                            <th>Observación</th>
+                                            <th>Opciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-2 modal">
+                            <div class="form form-modal">
+                                <h4 class="sub_titulo">Agregar formacion profesional</h4>
+                                <div class="grupo">
+                                    <label for="formacion">Formación profesional</label>
+                                    <select name="" id="formacion">
+                                        <option value="">Seleccionar</option>
+                                    </select>
+                                </div>
+                                <div class="grupo">
+                                    <label for="pais">País</label>
+                                    <select name="" id="pais">
+                                        <option value="">Seleccionar</option>
+                                    </select>
+                                </div>
+                                <div class="grupo">
+                                    <label for="uni">Universidad</label>
+                                    <input type="text" id="uni">
+                                </div>
+                                <div class="grupo">
+                                    <label for="especialidad">Especialidad</label>
+                                    <input type="text" id="especialidad">
+                                </div>
+                                <div class="grupo">
+                                    <label for="fecha_inicio">Fecha Inicio</label>
+                                    <input type="date" id="fecha_inicio">
+                                </div>
+                                <div class="grupo">
+                                    <label for="fecha_final">Fecha final</label>
+                                    <input type="date" id="fecha_final">
+                                </div>
+                                <div class="grupo">
+                                    <label for="grado">Grado Obtenido</label>
+                                    <input type="text" id="grado">
+                                </div>
+                                <div class="grupo ampliacion">
+                                    <label for="obs">Observación</label>
+                                    <textarea id="obs" style="resize: none;" rows="4" cols="4"></textarea>
+                                </div>
+                                <div>
+                                    <button class="boton guardar btn-cerrar">Guardar</button>
+                                    <button class="boton cancelar btn-cerrar">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/locale/es.min.js"></script>
+        <script src="app.js"></script>
+</body>
+
+</html>

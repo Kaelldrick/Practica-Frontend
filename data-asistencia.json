@@ -1,0 +1,98 @@
+[
+    {
+        "semestre": "2023-1",
+        "fecha": "2023-01-17",
+        "curso": "ABC",
+        "horario": "07-08",
+        "marcacion": "07:34-08:01",
+        "estado": 1
+    },
+    {
+        "semestre": "2023-1",
+        "fecha": "2023-01-19",
+        "curso": "FFF0",
+        "horario": "11-13",
+        "marcacion": "11:34-13:00",
+        "estado": 0
+    },
+    {
+        "semestre": "2023-1",
+        "fecha": "2023-02-05",
+        "curso": "MNP",
+        "horario": "06-08",
+        "marcacion": "06:34-08:01",
+        "estado": 1
+    },
+    {
+        "semestre": "2023-1",
+        "fecha": "2023-03-15",
+        "curso": "MC01",
+        "horario": "09-11",
+        "marcacion": "09:30-11:01",
+        "estado": 1
+    },
+    {
+        "semestre": "2023-2",
+        "fecha": "2023-05-19",
+        "curso": "QQQ",
+        "horario": "09-10",
+        "marcacion": "09:34-10:01",
+        "estado": 1
+    },
+    {
+        "semestre": "2023-2",
+        "fecha": "2023-06-20",
+        "curso": "EEE",
+        "horario": "10-12",
+        "marcacion": "10:35-12:01",
+        "estado": 1
+    },
+    {
+        "semestre": "2023-2",
+        "fecha": "2023-04-20",
+        "curso": "VITE",
+        "horario": "07-12",
+        "marcacion": "07:35-12:01",
+        "estado": 1
+    },
+    {
+        "semestre": "2023-1",
+        "fecha": "2023-04-10",
+        "curso": "EPT",
+        "horario": "11-12",
+        "marcacion": "10:00-12:00",
+        "estado": 0
+    },
+    {
+        "semestre": "2023-1",
+        "fecha": "2023-05-29",
+        "curso": "BEM",
+        "horario": "09-11",
+        "marcacion": "09:00-11:15",
+        "estado": 1
+    },
+    {
+        "semestre": "2023-1",
+        "fecha": "2023-06-11",
+        "curso": "SASS",
+        "horario": "08-11",
+        "marcacion": "08:05-11:00",
+        "estado": 1
+    },
+    {
+        "semestre": "2022-1",
+        "fecha": "2022-01-12",
+        "curso": "HTML",
+        "horario": "06-10",
+        "marcacion": "06:05-10:00",
+        "estado": 1
+    },
+    {
+        "semestre": "2022-1",
+        "fecha": "2022-02-15",
+        "curso": "CSS",
+        "horario": "05-11",
+        "marcacion": "05:05-11:30",
+        "estado": 1
+    }
+]
